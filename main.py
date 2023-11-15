@@ -69,18 +69,19 @@ while True:
     guess = find_coincidence(letter)
 
     if not guess:
-        print(f"La letra {letter} no se encuentra en la palabra")
         tries += 1
+        if tries == 6:
+            draw_body(tries)
+            print("Juego perdido :(")
+            break
+        else:
+            print(f"La letra {letter} no se encuentra en la palabra")
+        
     else:
         if ''.join(letters) == word: 
-            print(f"Haz ganado!! La palabra es {word}")
+            print(f"Haz ganado :) La palabra es {word}")
             break
         else:
             print("¡Haz encontrado una letra!")
-
-    if tries == 6:
-        draw_body(tries)
-        print("Juego perdido")
-        break
     
     print("\n")
