@@ -43,11 +43,7 @@ def draw_body(fails: int):
     print("- - - - \n")
     
 #Hola
-def find_coincidence(letter: str = ""):
-    
-    #Buscamos cuantas veces está la letra en la palabra
-    times_letter_in_word = word.count(letter)
-    
+def find_coincidence(letter: str = ""):   
     if letter in word:
         for i, w in enumerate(word):
             if w == letter and letters[i] == '_':
