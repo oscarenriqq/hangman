@@ -14,7 +14,6 @@ with open("words.txt", "r") as words_file:
 def draw_body(fails: int):
     
     lose = 6
-    
     body = {
         1: "O",
         2: "|",
@@ -56,16 +55,13 @@ for _ in range(len(word)):
     letters.append('_')
     
 while True:
-    
     draw_body(tries)
     
     print(f"Tu palabra es: {' '.join(letters)}")
-
     print(f"Letras adivinadas: {' '.join(guessed)}")
     
     letter = input("Ingresa una letra: ")
     
-    #Search coincidences
     guess = find_coincidence(letter)
 
     if not guess:
@@ -76,12 +72,10 @@ while True:
             break
         else:
             print(f"La letra {letter} no se encuentra en la palabra")
-        
     else:
         if ''.join(letters) == word: 
             print(f"Haz ganado :) La palabra es {word}")
             break
         else:
             print("¡Haz encontrado una letra!")
-    
     print("\n")
