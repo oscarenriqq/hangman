@@ -1,0 +1,10 @@
+gato
+perro
+ardilla
+lapiz
+manzana
+avion
+zanahoria
+cocina
+tomate
+galleta
