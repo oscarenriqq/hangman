@@ -41,7 +41,6 @@ def draw_body(fails: int):
             print("-")
     print("- - - - \n")
     
-#Hola
 def find_coincidence(letter: str = ""):   
     if letter in word:
         for i, w in enumerate(word):
